@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <h2>Your Profile</h2>
+  <!-- Vulnerable to XSS -->
+  <form>
+    <label>About Me:</label><br>
+      <form action="/submit" method="post">
+          <label>Name:</label>
+          <input type="text" name="name"><br><br>
+          <label>Email:</label>
+          <input type="email" name="email"><br><br>
+          <label>Phone:</label>
+          <input type="text" name="phone"><br><br>
+          <input type="submit" value="Submit">
+      </form>
+
+      <div>
+          <h3>Submitted Data:</h3>
+          <p th:utext="'Name: ' + ${name}"></p>
+          <p th:utext="'Email: ' + ${email}"></p>
+          <p th:utext="'Phone: ' + ${phone}"></p>
+      </div>
+
+  </form>
+  </form>
+</head>
+<body>
+
+</body>
+</html>

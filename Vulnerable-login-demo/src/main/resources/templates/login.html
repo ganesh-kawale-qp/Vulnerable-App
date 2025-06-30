@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+</head>
+<body>
+<h2>Login Page</h2>
+
+<form action="/doLogin" method="post">
+    <input type="text" name="username" placeholder="Username"/><br>
+    <input type="password" name="password" placeholder="Password"/><br>
+    <button type="submit">Login</button>
+</form>
+<p>Don't have an account?</p>
+<a href="/register"><button>Register</button></a>
+</body>
+</html>
